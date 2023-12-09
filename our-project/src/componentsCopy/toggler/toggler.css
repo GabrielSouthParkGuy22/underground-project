@@ -1,0 +1,53 @@
+#toggler-container {
+  display: none;
+  background-color: #34095f;
+  padding: 0.5rem;
+}
+
+.search-container-toggler {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+#search-input-toggler {
+  width: 100%;
+  color: #34095f;
+  border: 2px solid transparent;
+  border-radius: 0.35rem 0rem 0rem 0.35rem;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  outline: none;
+}
+
+#search-icon-btn-toggler {
+  background-color: #190027;
+  border: none;
+  padding: 0.475rem;
+  border-radius: 0rem 0.2rem 0.2rem 0rem;
+  cursor: pointer;
+}
+
+#search-input-toggler:focus {
+  border-color: #bf74c0;
+}
+
+#nav-list-toggler {
+  list-style: none;
+}
+
+#nav-list-toggler a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+#nav-list-toggler li + li {
+  margin-top: 1rem;
+}
+
+@media (min-width: 865px) {
+  #toggler-container {
+    display: none !important;
+  }
+}

@@ -1,0 +1,132 @@
+body {
+  background-color: #404258;
+}
+
+#payment-complete-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+}
+
+#check-box-payment-complete {
+  background-color: #262835;
+  padding: 2rem;
+  display: flex;
+  list-style: none;
+  gap: 3rem;
+}
+
+#check-box-payment-complete li {
+  flex: 1;
+  background-color: #efb8f0;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  border-radius: 0.35rem;
+}
+
+#check-box-payment-complete li {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+#check-box-payment-complete li:nth-child(3) {
+  background-color: #b6c79c;
+}
+
+#check-box-payment-complete li + li::before {
+  content: "";
+  display: block;
+  background-image: url(../imgs/small_arrow.svg);
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 40px;
+  position: absolute;
+  left: -34px;
+}
+
+#payment-confirmed-box {
+  padding: 2rem;
+}
+
+#payment-title-complete {
+  background-color: #262835;
+  border-radius: 0.35rem 0.35rem 0rem 0rem;
+  padding: 2rem;
+}
+
+#payment-title-complete h1 {
+  font-size: 2rem;
+  color: #ffffff;
+  font-weight: 400;
+}
+
+#payment-confirmed-msg {
+  background-color: #1f202b;
+  padding: 2rem;
+  border-radius: 0rem 0rem 0.35rem 0.35rem;
+}
+
+#payment-confirmed-msg p {
+  color: #c7c7c7;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+#payment-confirmed-msg p + p {
+  margin-top: 1.5rem;
+}
+
+#payment-confirmed-msg p:last-child {
+  text-align: center;
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  #check-box-payment-complete {
+    padding: 2rem 1rem;
+    gap: 1rem;
+  }
+
+  #check-box-payment-complete li + li::before {
+    display: none;
+  }
+}
+
+@media (max-width: 604px) {
+  #payment-confirmed-box {
+    padding: 2rem 1rem;
+  }
+
+  #payment-title-complete {
+    padding: 2rem 1rem;
+  }
+
+  #payment-confirmed-msg {
+    padding: 2rem 1rem;
+  }
+
+  #check-box-payment-complete {
+    flex-direction: column;
+  }
+
+  #payment-title-complete h1 {
+    font-size: 1.5rem;
+  }
+
+  #payment-confirmed-msg p {
+    font-size: 1.125rem;
+    line-height: 1.625;
+  }
+
+  #payment-confirmed-msg p:last-child {
+    font-size: 1.625rem;
+  }
+}
+
+@media (max-width: 400px) {
+  #payment-title-complete h1 {
+    font-size: 1.2rem;
+  }
+}
