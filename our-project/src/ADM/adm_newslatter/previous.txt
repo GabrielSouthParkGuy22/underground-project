@@ -1,0 +1,55 @@
+.newslatter {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    padding: 20px;
+    height: 10rem;
+    background-color: #69266A;
+}
+
+label {
+    font-weight: bold;
+    color: white;
+    font-size: 2rem;
+}
+
+.containerInputButton {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+
+   
+    width: 30%;
+    height: 4rem;
+}
+
+button,input {
+    height: 75%;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+#buttonInscreva {
+    background-color: #190027;
+    color:white;
+    width: 6rem;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#inputEmail {
+    cursor: text;
+    background-color: #EFB8F0;
+    color: 34095F;
+    width: 15rem;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+
+
+  

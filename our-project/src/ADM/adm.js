@@ -1,7 +1,7 @@
 import "./adm.css";
 import AdmHeader from "./adm_header/adm_header.js";
 import AdmToggler from "./adm_toggler/adm_toggler.js";
-import Rodape from "../componentsCopy/rodape/index.js";
+import AdmRodape from "./adm_rodape/index.js";
 
 export default function Adm() {
   function startElements() {
@@ -147,7 +147,7 @@ export default function Adm() {
           </ul>
         </div>
       </div>
-      <Rodape />
+      <AdmRodape />
     </>
   );
 }

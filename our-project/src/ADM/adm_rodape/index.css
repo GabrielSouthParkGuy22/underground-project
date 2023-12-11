@@ -1,0 +1,24 @@
+.adm-footer {
+  background-color: #1f202b;
+  height: 23rem;
+}
+
+.adm-contatos {
+  padding: 1rem;
+  /* padding-left: 2.5rem; */
+  .titulo-contatos {
+    font-weight: bold;
+  }
+}
+
+.adm-contatos > p {
+  color: #bbbbbb;
+}
+
+/**/
+@media (max-width: 320px) {
+  .adm-contatos > p {
+    font-size: 0.9rem;
+  }
+}
+/**/

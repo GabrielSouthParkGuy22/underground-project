@@ -1,67 +1,8 @@
-<<<<<<< HEAD
-import './index.css'
-import '../../index.css'
-import { useState } from 'react'
-import Header from '../../componentsCopy/header/header'
-import Rodape from '../../componentsCopy/newslatter'
-
-
-export default function PageCadastro() {
-    const [email, setEmail] = useState('')
-    const [senha, setSenha] = useState('')
-    const [erro, setErro] = useState('')
-
-    function cadastrar() {
-        try {
-            Validacao(email)
-            Validacao(senha)
-        } catch (error) {
-            
-        }
-    }
-
-    // verifica se o input está nulo ou undefined
-    function Validacao(string) {
-        try {
-            if(!string || string === undefined) {
-                throw new Error("Campo inválido, preencha novamente!")
-            }
-        } catch (error) {
-            setErro(error.message)
-        }
-    }
-
-    return (
-        <main classname="pageUserRegister">
-            <Header/>
-            <div className="lineLogin"><h1>Login</h1></div>
-
-            <div className="page">
-                <div className="containerLogin">
-                    <div className="lineText"><h1>Preencha as informações</h1></div>
-                    <div className="containerInputs">
-                        <label id="nameInput">Email</label>
-                        <input id ="senha"type="text" value={email} onChange={e => setEmail(e.target.value)} placeholder='Digite o e-mail'/>
-
-                        <label id="nameInput">Senha</label>
-                        <input id ="email"type="password" value={senha} onChange={e => setSenha(e.target.value)} placeholder='Digite a senha'/>
-                    </div>
-                    <div className="containerButton"><button onClick={cadastrar} id="cadastroUser">Cadastre-se</button> {erro}</div>
-                </div>
-            </div>
-            <Rodape/>
-         
-        </main>
-    )
-
-}
-=======
 import "./index.css";
 import "../../index.css";
 import { useState } from "react";
-import Header from "../../componentsCopy/header/header.js";
-import Toggler from "../../componentsCopy/toggler/toggler.js";
-import Rodape from "../../componentsCopy/rodape/index.js";
+import Header from "../../componentsCopy/header/header";
+import Rodape from "../../componentsCopy/newslatter";
 
 export default function PageCadastro() {
   const [email, setEmail] = useState("");
@@ -89,7 +30,6 @@ export default function PageCadastro() {
   return (
     <main classname="pageUserRegister">
       <Header />
-      <Toggler />
       <div className="lineLogin">
         <h1>Login</h1>
       </div>
@@ -130,4 +70,3 @@ export default function PageCadastro() {
     </main>
   );
 }
->>>>>>> 3418b94 (tela de usuários registrados)
