@@ -2,10 +2,10 @@ import "./adm.css";
 import AdmHeader from "./adm_header/adm_header.js";
 import AdmToggler from "./adm_toggler/adm_toggler.js";
 import AdmRodape from "./adm_rodape/index.js";
-import axios from "axios"
+import axios from "axios";
 import { useEffect, useState } from "react";
 export default function Adm() {
-  const [usuario, setUsuarios] = useState([])
+  const [usuario, setUsuarios] = useState([]);
   // function startElements() {
   //   console.log("clicked!");
   //   const userElements = document.querySelectorAll(".nameContainer");
@@ -25,20 +25,19 @@ export default function Adm() {
   //   }
   // }
 
-  async function carregarTodos () {
+  async function carregarTodos() {
     try {
-        const dados = await axios.get(`http://localhost:5001/cadastros/usuarios`)
-        setUsuarios(dados.data)
-        console.log(usuario)
-
+      const dados = await axios.get(`http://localhost:5001/cadastros/usuarios`);
+      setUsuarios(dados.data);
+      console.log(usuario);
     } catch (error) {
-        console.log(error.message)
+      console.log(error.message);
     }
-}
+  }
 
-useEffect(() =>{
-  carregarTodos()
-}, [])
+  useEffect(() => {
+    carregarTodos();
+  }, []);
 
   return (
     <>
@@ -50,7 +49,6 @@ useEffect(() =>{
         </div>
 
         <div id="user-data-list-container">
-
           <ul id="user-data-list" aria-label="users-list">
             {/* <button id="start-btn" onClick={startElements}>
               START
@@ -60,30 +58,30 @@ useEffect(() =>{
                 Usuarios Cadastrados: <span className="userSpanIcon">+</span>
               </p>
 
-              {usuario.map ( usuario =>
+              {usuario.map((usuario) => (
                 <ul className="userInfoContainer">
                   <li>
                     <span>Nome: {usuario.NOME} </span>
                   </li>
                   <li>
-                    <span>Cpf: {usuario.CPF} </span> 
+                    <span>Cpf: {usuario.CPF} </span>
                   </li>
                   <li>
-                    <span>Email: {usuario.EMAIL} </span> 
+                    <span>Email: {usuario.EMAIL} </span>
                   </li>
                   <li>
-                    <span>Senha: {usuario.senha} </span> 
+                    <span>Senha: {usuario.senha} </span>
                   </li>
                   <li>
                     <span>Cidade: </span>
                   </li>
                   <li>
-                    <span>Telefone: {usuario.TELEFONE}  </span>
+                    <span>Telefone: {usuario.TELEFONE} </span>
                   </li>
 
-                  <hr/>
+                  <hr />
                 </ul>
-              )}
+              ))}
             </li>
 
             <li className="userContainer">
