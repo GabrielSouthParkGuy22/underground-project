@@ -1,36 +1,20 @@
-#toggler-container {
+#adm-toggler-container {
   display: none;
   background-color: #34095f;
   padding: 0.5rem;
 }
 
-#userProfile-toggler {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#profile-picture-toggler {
-  border-radius: 50%;
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-  object-position: center;
-  cursor: pointer;
-}
-
-#user-name-toggler {
+#adm-toggler-container > p {
   color: #ffffff;
-  font-weight: 400;
   font-size: 1.25rem;
 }
 
-#separated-bar {
+#adm-toggler-container > hr {
   height: 4px;
-  margin-block: 1rem;
+  border-radius: 2px;
   border: none;
   background-color: #ffffff;
-  border-radius: 0.35rem;
+  margin-block: 5px 20px;
 }
 
 .search-container-toggler {
@@ -76,7 +60,14 @@
 }
 
 @media (min-width: 865px) {
-  #toggler-container {
+  .search-container-toggler {
+    display: none !important;
+  }
+}
+
+@media (min-width: 400px) {
+  #adm-toggler-container > hr,
+  #adm-toggler-container > p {
     display: none !important;
   }
 }

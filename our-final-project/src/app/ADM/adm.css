@@ -1,0 +1,69 @@
+#user-data-title {
+  background-color: #262835;
+  padding: 1rem 2rem;
+  margin-bottom: 4rem;
+}
+
+#user-data-title h1 {
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
+#user-data-list-container {
+  padding: 1rem 2rem;
+}
+
+#user-data-list {
+  list-style: none;
+}
+
+#start-btn {
+  font-size: 1.25rem;
+  padding: 1rem;
+  background-color: #69266a;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.userContainer {
+  background-color: #1f202b;
+}
+
+.userContainer + .userContainer {
+  margin-top: 1rem;
+}
+
+.userContainer p {
+  padding: 1rem;
+  font-size: 1.25rem;
+  color: #e2e2e2;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.userInfoContainer {
+  background-color: #262835;
+  list-style: none;
+  padding: 1rem;
+  color: #b6b6b6;
+}
+
+.userInfoContainer li {
+  word-break: break-all;
+}
+
+.userInfoContainer li + li {
+  margin-top: 1.5rem;
+}
+
+hr {
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+}

@@ -1,0 +1,24 @@
+.footer {
+  background-color: #1f202b;
+  height: 23rem;
+}
+
+.contatos {
+  padding: 1rem;
+  /* padding-left: 2.5rem; */
+  .titulo-contatos {
+    font-weight: bold;
+  }
+}
+
+.contatos > p {
+  color: #bbbbbb;
+}
+
+/**/
+@media (max-width: 320px) {
+  .contatos > p {
+    font-size: 0.9rem;
+  }
+}
+/**/

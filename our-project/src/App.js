@@ -11,7 +11,7 @@ import AdmUsers from "./ADM/amd_users/admUsers.js";
 function App() {
   return (
     <>
-      <AdmUsers />
+      <UserRegister />
     </>
   );
 }

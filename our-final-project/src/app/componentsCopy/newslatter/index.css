@@ -1,0 +1,79 @@
+.newslatter {
+  background-color: #69266a;
+  padding: 2rem;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 2rem;
+}
+
+label {
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 2rem;
+}
+
+.containerInputButton {
+  display: flex;
+}
+
+.containerInputButton input,
+.containerInputButton button {
+  border: none;
+  outline: none;
+  display: block;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+}
+
+.containerInputButton input {
+  background-color: #efb8f0;
+  color: #34095f;
+  border-radius: 0.35rem 0rem 0rem 0.35rem;
+}
+
+.containerInputButton button {
+  background-color: #190027;
+  color: #ffffff;
+  border-radius: 0rem 0.35rem 0.35rem 0rem;
+}
+
+/**/
+@media (max-width: 1024px) {
+  label {
+    font-size: 1.5rem;
+  }
+}
+/**/
+
+@media (max-width: 700px) {
+  .newslatter {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .containerInputButton input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 375px) {
+  label {
+    font-size: 1.2rem;
+  }
+
+  .containerInputButton {
+    flex-direction: column;
+  }
+
+  .containerInputButton input {
+    border-radius: 0rem;
+  }
+
+  .containerInputButton button {
+    border-radius: 0rem;
+  }
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Pagamento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <img src="vinil.png" alt="discovinil" />
+        
+        <p>Seu nome</p>
+    </div>
+   
+    <div class="formapagamento">
+      
+        <h1 class="titulo">Forma de Pagamento</h1>
+        <div class="credito">
+          <input type="radio" id="cartao" name="opcao" value="F">
+          <label for="card">Cartão de Crédito</label>
+          <select name="genero" id="genero">
+            <option value="V">Visa</option>
+            <option value="M">Mastercard</option>
+          </select>
+        </div>
+        
+        <div class="transferencia">
+          <input type="radio" id="transfer" name="opcao" value="C">
+          <label for="transf">Transferência Bancária</label>
+          
+        </div>
+        
+        <div class="pgtopix">
+          <input type="radio" id="pix" name="opcao" value="S">
+          <label for="pix">Pix</label>
+          
+        </div>
+        
+    </div>
+    
+    <div class="botao">
+        <button class="confirma" onclick="">CONFIRMAR
+        </button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
