@@ -1,0 +1,117 @@
+body {
+
+    
+  background-color: grey;
+  
+}
+
+
+/* CSS Dados Usuário */
+
+.cadastrousuario {
+  
+  
+  display: grid;
+  grid-template-columns: auto auto;
+  border: 1px solid black;
+  width: 1500px;
+  position: relative;
+  margin: auto;
+  margin-bottom: 40px;
+  background-color: black;
+  
+  
+  
+  
+}
+
+#nomesobrenome {
+  
+  text-align: left;
+  margin-left: 200px;
+  color: white;
+  
+  
+}
+
+
+
+.containernews {
+  
+  background-color: darkmagenta;
+  
+  
+}
+
+
+/*CSS Meus Favoritos */
+
+.titulofavoritos {
+  
+  color: white;  
+  
+}
+
+
+.meusfavoritos {
+  
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  
+  
+}
+
+.album1, .album2, .album3 {
+  
+  border: 1px solid black;
+  margin: 80px;
+  margin-top: 10px;
+  background-color: black;
+  border-radius: 10px;
+  
+  
+}
+
+.album1 {
+  
+  margin-bottom: 70px;
+  
+}
+
+.album3 {
+  
+  margin-bottom: 70px;
+  
+}
+
+.botao1, .botao2, .botao3 {
+  
+  
+  width: 100px;
+  height: 30px;
+  font-size: 16px;
+  border-radius: 5px;
+  
+}
+
+
+
+img {
+  
+  margin-left: 60px;
+  
+  
+}
+
+.setaesqfav {
+  
+  position: relative;
+  margin-top: 180px;
+}
+
+.setadirfav {
+  
+  position: relative;
+  margin-top: 180px;
+}
+
