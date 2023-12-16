@@ -3,7 +3,7 @@ import "../../index.css";
 import { useState } from "react";
 import Header from "../../componentsCopy/header/header";
 import Rodape from "../../componentsCopy/newslatter";
-
+import axios from "axios";
 export default function PageCadastro() {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");

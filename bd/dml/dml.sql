@@ -11,3 +11,45 @@ create table tb_usuario (
     SENHA				VARCHAR(15),
     DT_NASCIMENTO		date
 );
+
+create table tb_adm (
+	ID_ADM			    INT PRIMARY KEY AUTO_INCREMENT,
+	EMAIL				VARCHAR(50),
+    NOME				VARCHAR(100),
+    SENHA				VARCHAR(15)
+);
+
+create table tb_banda (
+	ID_BANDA			    INT PRIMARY KEY AUTO_INCREMENT,
+    NOME					VARCHAR(100)
+);
+
+create table tb_album (
+	ID_BANDA			     	INT PRIMARY KEY AUTO_INCREMENT,
+    NOME					    VARCHAR(100),
+    DESCRICAO					VARCHAR(100),
+    LANCAMENTO					date,
+    PRECO						double,
+    QUANTIDADE					INT,
+    FK_BANDA					INT,
+    FOREIGN KEY (FK_BANDA) REFERENCES TB_BANDA(ID_BANDA)
+);
+
+
+create table tb_contrato (
+	ID_CONTRATO				INT PRIMARY KEY AUTO_INCREMENT,
+    LOCAL_ORIGEM			VARCHAR(130),
+    CRIACAO_DATA			DATE,
+    FINAL_DATA				DATE,
+    FK_BANDA				INT,
+    FK_LABEL				INT,
+    FOREIGN KEY (FK_BANDA) REFERENCES TB_BANDA(ID_BANDA),
+    FOREIGN KEY (FK_LABEL) REFERENCES TB_LABEL(ID_LABEL)
+);
+
+create table tb_label (
+    ID_LABEL					INT PRIMARY KEY AUTO_INCREMENT,
+	STATUS_ATUAL				VARCHAR(20),
+    NOME				        VARCHAR(20),
+    PAIS				        VARCHAR(20)
+);

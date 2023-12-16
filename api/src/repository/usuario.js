@@ -16,9 +16,19 @@ export async function visualizarUsuarios() {
     const comando = `
         SELECT * FROM TB_USUARIO
     `
-
     const [call] = await con.query(comando, [])
 
     return call
 }
 
+export async function realizarLogin(user) {
+    const comando = 
+    `
+        select 
+        NOME, ID_USUARIO
+        from tb_usuario
+        where EMAIL = ? and SENHA = ?;
+    `
+    const [resp] = await con.query(comando, [user.email, user.senha])
+    return resp
+}

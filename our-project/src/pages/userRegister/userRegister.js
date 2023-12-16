@@ -1,5 +1,6 @@
 // const root_container = document.querySelector("#root");
 import {useState}  from "react";
+
 import axios from "axios";
 
 export function Header() {
@@ -42,6 +43,7 @@ export function UserForm() {
         senha: senha,
         dt_nascimento: nascimento
       })
+      console.log("CADASTROU")
     } catch (error) {
       setErro(error.message)
     }
