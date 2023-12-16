@@ -1,13 +1,13 @@
 // const root_container = document.querySelector("#root");
 import "./userRegister.css";
-import Header from "../componentsCopy/header/header.js";
+// import Header from "../componentsCopy/header/header.js";
 import Toggler from "../componentsCopy/toggler/toggler.js";
 import Rodape from "../componentsCopy/rodape/index.js";
 
 export default function UserRegister() {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <Toggler />
       <div id="user-register-container">
         <div id="registerHeader">

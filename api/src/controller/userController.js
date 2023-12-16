@@ -49,16 +49,16 @@ try {
 
 
 // Endpoint para verificar se um usuário existe na tabela na hora de realiar o login
-server.get("/usuario/login", async (req,resp) => {
+server.post("/usuario/login", async (req,resp) => {
     try {
-        const info = req.body 
-        const userLogado = await realizarLogin(info)
-        console.log(userLogado, typeof userLogado)
-        
-        if(userLogado[0] == null || undefined || !userLogado) {
-            resp.status(401).send("USER NOT REGISTERED")
+        const {email, senha} = req.body 
+        const userLogado = await realizarLogin(email, senha)
+        console.log(userLogado)
+
+        if(!userLogado) {
+            resp.status(401).send('nao autorizado')
         } else {
-            resp.status(200).send("LOGIN PERMITIDO")
+            resp.status(200).send("autorizado")
         }
     } catch (error) {
         resp.send(error.message)

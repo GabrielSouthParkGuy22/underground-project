@@ -21,7 +21,7 @@ export async function visualizarUsuarios() {
     return call
 }
 
-export async function realizarLogin(user) {
+export async function realizarLogin(email, senha) {
     const comando = 
     `
         select 
@@ -29,6 +29,6 @@ export async function realizarLogin(user) {
         from tb_usuario
         where EMAIL = ? and SENHA = ?;
     `
-    const [resp] = await con.query(comando, [user.email, user.senha])
-    return resp
+    const [resp] = await con.query(comando, [email, senha])
+    return resp[0]
 }

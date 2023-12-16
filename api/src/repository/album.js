@@ -28,3 +28,16 @@ export async function visualizarTodosAlbuns () {
 }
 
 
+export async function deletarAlbumPorId (idBanda) {
+    const comando = 
+    `
+    delete from tb_album where id_banda = ?
+
+    `
+    const [call] = await con.query(comando, [idBanda])
+    return call.affectedRows
+}
+
+
+
+

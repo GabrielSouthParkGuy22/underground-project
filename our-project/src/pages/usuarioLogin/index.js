@@ -9,11 +9,16 @@ export default function PageCadastro() {
   const [senha, setSenha] = useState("");
   const [erro, setErro] = useState("");
 
-  function cadastrar() {
+  async function cadastrar() {
     try {
-      Validacao(email);
-      Validacao(senha);
-    } catch (error) {}
+      const logado = await axios.post('http://localhost:5001/usuario/login', {
+        email : email,
+        senha: senha
+      })
+      setErro(logado.data)
+    } catch (error) {
+      setErro(error.message)
+    }
   }
 
   // verifica se o input está nulo ou undefined

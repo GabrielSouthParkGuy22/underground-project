@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import UserRegister from './pages/userRegister';
 import Adm from './ADM/adm';
-import UsuarioLogin from './userRegister'
+import UsuarioLogin from '../src/pages/usuarioLogin'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

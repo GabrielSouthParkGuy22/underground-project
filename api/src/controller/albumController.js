@@ -1,5 +1,5 @@
 import Router from "express";
-import { cadastroAlbum, visualizarTodosAlbuns } from "../repository/album.js";
+import { cadastroAlbum, deletarAlbumPorId, visualizarTodosAlbuns } from "../repository/album.js";
 
 
 const server = Router()
@@ -37,6 +37,19 @@ server.get("/albuns", async (req, res) => {
             erro: error.message
         })
     }    
-    })
+})
+
+server.delete("/album/:idBanda", async (req,resp) => {
+    try {
+        const id = req.params.idBanda
+        await deletarAlbumPorId(id)
+        resp.status(200).send()
+
+    } catch (error) {
+        resp.status(401).send(error.message)
+    }
+
+
+})
 
 export default server
