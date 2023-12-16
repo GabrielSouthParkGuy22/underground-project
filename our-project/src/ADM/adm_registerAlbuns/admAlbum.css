@@ -1,0 +1,47 @@
+body {
+  background-color: #404258;
+}
+
+#albums-data-title {
+  background-color: #262835;
+  padding: 1rem 2rem;
+  margin-bottom: 4rem;
+}
+
+#albums-data-title h1 {
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
+#album-data-list-container {
+  max-width: 2000px;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+}
+
+#album-data-list-container {
+  padding: 2rem;
+}
+
+#album-data-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+@media (max-width: 1024px) {
+  #album-data-list-container {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #album-data-list {
+    grid-template-columns: 1fr;
+  }
+
+  #album-data-list {
+    gap: 2rem 1rem;
+  }
+}
