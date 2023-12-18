@@ -2,10 +2,10 @@ import {con} from '../connection.js'
 
 export async function cadastroAlbum(info) {
     const comando = `
-    INSERT INTO tb_album (NOME, DESCRICAO, LANCAMENTO, PRECO, QUANTIDADE, FK_BANDA)
-    VALUES (?, ?, ?, ?, ?, ?);
+    INSERT INTO tb_album (NOME, DESCRICAO, TIPO, FORMATO, LANCAMENTO, PRECO, QUANTIDADE, IMAGEM_URL, FK_BANDA)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);
     `
-    const [call] = await con.query(comando, [info.nome, info.descricao, info.lancamento, info.preco, info.quantidade, info.fkId])
+    const [call] = await con.query(comando, [info.nome, info.descricao, info.tipo, info.formato, info.lancamento, info.preco, info.quantidade, info.imagem_url, info.fkId])
     return call
 }
 
