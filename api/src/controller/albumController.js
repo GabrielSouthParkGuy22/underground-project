@@ -4,12 +4,10 @@ import { cadastroAlbum, deletarAlbumPorId, visualizarTodosAlbuns } from "../repo
 
 const server = Router()
 
-
 //endpoint para cadastrar um álbum
 server.post("/album", async (req,resp) => {
     try {
         const data = req.body
-       
         const albumCadastrado = await cadastroAlbum(data)
         resp.status(200).send({
             msg : "Álbum Cadastrado!",
@@ -19,7 +17,6 @@ server.post("/album", async (req,resp) => {
         resp.status(400).send(error.message)
     }
 })
-
 
 //endpoint para visualizar todos os albúns cadastrados
 server.get("/albuns", async (req, res) => {
@@ -39,6 +36,7 @@ server.get("/albuns", async (req, res) => {
     }    
 })
 
+// deletar album
 server.delete("/album/:idBanda", async (req,resp) => {
     try {
         const id = req.params.idBanda
@@ -48,8 +46,6 @@ server.delete("/album/:idBanda", async (req,resp) => {
     } catch (error) {
         resp.status(401).send(error.message)
     }
-
-
 })
 
 export default server

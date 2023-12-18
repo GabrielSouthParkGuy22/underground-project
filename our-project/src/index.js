@@ -4,12 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import UserRegister from './pages/userRegister';
-import Adm from './ADM/adm';
+import Adm from '../src/ADM/adm_registerAlbuns/admAlbum.js';
 import UsuarioLogin from '../src/pages/usuarioLogin'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <UsuarioLogin/>
+    <Adm/>
   </React.StrictMode>
 );
 

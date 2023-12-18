@@ -7,56 +7,27 @@ import violator from "./albumData/imgs-albums/violator.png";
 import schizophrenia from "./albumData/imgs-albums/schizophrenia.png";
 import phm from "./albumData/imgs-albums/pretty_hate_machine.png";
 import hc from "./albumData/imgs-albums/harmony_corruption.png";
-
-const imgV = violator;
-const imgS = schizophrenia;
-const imgP = phm;
-const imgH = hc;
-
-const albumList = [
-  {
-    id: 1,
-    albumName: "Violator",
-    albumBand: "Depeche Mode",
-    albumReleaseDate: 1990,
-    label: "Sire Records",
-    type: "Vinyl",
-    format: "full-length",
-    img: imgV,
-  },
-  {
-    id: 2,
-    albumName: "Schizophrenia",
-    albumBand: "Sepultura",
-    albumReleaseDate: 1987,
-    label: "Cogumelo Records",
-    type: "Vinyl",
-    format: "full-length",
-    img: imgS,
-  },
-  {
-    id: 3,
-    albumName: "Pretty Hate Machine",
-    albumBand: "Nine Inch Nails",
-    albumReleaseDate: 1989,
-    label: "TVT Records",
-    type: "Vinyl",
-    format: "full-length",
-    img: imgP,
-  },
-  {
-    id: 4,
-    albumName: "Harmony Corruption",
-    albumBand: "Napalm Death",
-    albumReleaseDate: 1990,
-    label: "Earache Records",
-    type: "Vinyl",
-    format: "full-length",
-    img: imgH,
-  },
-];
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 export default function AdmAlbum() {
+  const [albumList, setAlbumList] = useState([])
+  const [erro, setErro] = useState('')
+  
+  async function ChamarAxios () {
+    try {
+      const albuns = await axios.get('http://localhost:5001/albuns', {})
+      setAlbumList(albuns.data)
+    } catch (error) {
+      setErro(error.message)
+    }
+    console.log(erro)
+  }
+
+  useEffect(() =>{
+    ChamarAxios()
+  }, [])
+
   return (
     <>
       <AdmHeader />
@@ -68,17 +39,16 @@ export default function AdmAlbum() {
 
         <div id="album-data-list-container">
           <ul id="album-data-list" aria-label="album-list">
-            {albumList.map((element) => (
+            {albumList.map((album) => (
               <AlbumData
-                key={element["id"]}
-                id={element["id"]}
-                albumName={element["albumName"]}
-                albumBand={element["albumBand"]}
-                albumReleaseDate={element["albumReleaseDate"]}
-                label={element["label"]}
-                type={element["type"]}
-                format={element["format"]}
-                img={element["img"]}
+                key={album["id"]}
+                albumName={album['nome_album'] ? album['nome_album'] : "no_data"}
+                albumBand={album['nome_banda'] ? album['nome_banda'] : "no_Data" }
+                albumReleaseDate={album["lancamento_data"]? album["lancamento_data"].slice(0,4) : "NO"}
+                // label={album["label"]}
+                type={album.tipo ? album.tipo : 'No_Data'}
+                format={album.formato ? album.formato : "No_Data"}
+                img={album["img"]}
               />
             ))}
           </ul>
