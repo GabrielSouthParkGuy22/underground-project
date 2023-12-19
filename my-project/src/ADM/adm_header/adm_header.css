@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#adm-header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0rem 2rem;
+  padding: 2rem;
+  background-color: #69266a;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+#search-input {
+  color: #34095f;
+  border: 2px solid transparent;
+  border-radius: 0.35rem 0rem 0rem 0.35rem;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  outline: none;
+}
+
+#search-icon-btn {
+  background-color: #190027;
+  border: none;
+  padding: 0.475rem;
+  border-radius: 0rem 0.2rem 0.2rem 0rem;
+  cursor: pointer;
+}
+
+#search-input:focus {
+  border-color: #bf74c0;
+}
+
+#adm-nav-list {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+}
+
+#adm-nav-list a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#adm-profile {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+#adm-profile p {
+  color: #ffffff;
+  font-size: 1.25rem;
+}
+
+#adm-gear-icon {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  padding: 1rem;
+}
+
+#adm-gear-icon img {
+  width: 2.5rem;
+}
+
+#toggler_icon {
+  display: none;
+}
+
+#toggler_icon img {
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  #adm-header-container {
+    padding: 2rem 1.25rem;
+  }
+}
+
+@media (max-width: 864px) {
+  .search-container,
+  #adm-nav-container {
+    display: none;
+  }
+
+  #toggler_icon {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  #adm-profile {
+    flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 400px) {
+  .logo-container img {
+    width: 150px;
+  }
+
+  #adm-profile p {
+    display: none;
+  }
+
+  #adm-gear-icon {
+    padding: 0.5rem;
+  }
+
+  #adm-gear-icon img {
+    width: 2rem;
+  }
+}

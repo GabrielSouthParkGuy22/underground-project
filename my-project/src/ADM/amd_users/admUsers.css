@@ -1,0 +1,27 @@
+#user-data-title {
+  background-color: #262835;
+  padding: 1rem 2rem;
+  margin-bottom: 4rem;
+}
+
+#user-data-title h1 {
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
+#user-data-list-container {
+  padding: 1rem 2rem;
+}
+
+#user-data-list {
+  list-style: none;
+}
+
+#start-btn {
+  font-size: 1.25rem;
+  padding: 1rem;
+  background-color: #69266a;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}

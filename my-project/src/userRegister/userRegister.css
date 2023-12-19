@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#root {
+  background-color: #404258;
+}
+
+#header {
+  padding: 1rem 2rem;
+  background-color: #69266a;
+}
+
+#registerTitle {
+  padding: 1rem 2rem;
+  background-color: #262835;
+  color: #ffffff;
+}
+
+#user-form {
+  margin: 4rem 0rem;
+  padding: 1rem;
+}
+
+#userDataContainer {
+  background-color: #262835;
+  padding: 2rem;
+  border-radius: 0.5rem 0.5rem 0rem 0rem;
+}
+
+#userData {
+  color: #ffffff;
+}
+
+#form-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 2rem;
+  gap: 1rem 2rem;
+  background-color: #1f202b;
+  border-radius: 0rem 0rem 0.5rem 0.5rem;
+}
+
+.input-field {
+  padding: 0.5rem;
+  outline: none;
+  border: 2px solid transparent;
+  border-radius: 0.2rem;
+  font-size: 1.2rem;
+  background-color: #404258;
+  color: #c0c0c0;
+}
+
+.input-field:focus {
+  border-color: #ac4fc4;
+}
+
+.label-tag {
+  color: #ffffff;
+}
+
+.item1,
+.item2,
+.item3,
+.item4,
+.item5,
+.item6,
+.item7,
+.item8 {
+  display: grid;
+  gap: 0.5rem 0rem;
+}
+
+.item1 {
+  grid-column: 1/-1;
+}
+
+.item2 {
+  grid-column: 1/-1;
+}
+
+#form-btn {
+  display: block;
+  margin: 0 auto;
+  background-color: #f18bf3;
+  color: #1e071f;
+  font-size: 2rem;
+  border: none;
+  padding: 1.2rem;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+#newsletter {
+  background-color: #69266a;
+  padding: 2rem;
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+#newsletter p {
+  color: #ffffff;
+  font-size: 1.25rem;
+}
+
+#newsletter-input {
+  background-color: #efb8f0;
+  color: #34095f;
+  border: 2px solid transparent;
+  border-radius: 0.2rem 0rem 0rem 0.2rem;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  outline: none;
+}
+
+#newsletter-input:focus {
+  border-color: #ac4fc4;
+}
+
+#subscribe-btn {
+  border: none;
+  background-color: #190027;
+  padding: 0.625rem;
+  font-size: 1.2rem;
+  color: #ffffff;
+  border-radius: 0rem 0.2rem 0.2rem 0rem;
+  cursor: pointer;
+}
+
+#contact-container {
+  padding: 2rem;
+  background-color: #1f202b;
+}
+
+#contact-container h3 {
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+#contact-container p {
+  color: #bbbbbb;
+}
+
+@media (max-width: 800px) {
+  #form-container {
+    grid-template-columns: 1fr;
+  }
+
+  #form-btn {
+    font-size: 1.4rem;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 494px) {
+  #newsletter-input,
+  #subscribe-btn {
+    border-radius: 0rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  #registerTitle,
+  #header {
+    padding: 1rem;
+  }
+
+  #user-form {
+    padding: 2rem 0.5rem;
+  }
+
+  #userDataContainer {
+    padding: 2rem 0.5rem;
+  }
+
+  #form-container {
+    padding: 2rem 0.5rem;
+  }
+
+  .input-field {
+    font-size: 1rem;
+    padding: 0.5rem 0rem;
+  }
+
+  #userData {
+    font-size: 1.5rem;
+  }
+
+  #newsletter {
+    padding: 1rem;
+  }
+
+  #contact-container {
+    padding: 1rem;
+  }
+
+  #contact-container p {
+    font-size: 0.825rem;
+  }
+}

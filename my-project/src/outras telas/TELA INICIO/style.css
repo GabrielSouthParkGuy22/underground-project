@@ -1,0 +1,106 @@
+* {
+  
+  margin: 0;
+  
+
+}
+
+
+body {
+  
+  text-align: center;
+  background-color: darkmagenta;
+  
+}
+
+.container {
+  
+  background-color: black;
+  height: 100px;
+  display: flex;
+  column-gap: 800px;
+  color: white;
+  align-items: center;
+  
+}
+
+.login {
+  
+  padding: 120px;
+  line-height: 30px;
+  
+}
+
+.pesquisa {
+  
+  margin-right: -200px;
+  display: flex;
+  
+  
+}
+
+
+
+bandas, #banda1, #banda2, #banda3 {
+  
+  
+  color: white;
+  font-size: 40px;
+  line-height: 80px;
+  align-items: center;
+  
+}
+
+
+#banda1 {
+  
+  position: absolute;
+  font-size: 40px;
+  left: 200px;
+  top: 500px;
+  
+}
+
+
+#banda1:hover {
+  
+  cursor: pointer;
+  color: greenyellow;
+  
+}
+
+
+#banda2 {
+  
+  position: absolute;
+  font-size: 40px;
+  left: 770px;
+  top: 600px;
+  
+}
+
+
+#banda2:hover {
+  
+  cursor: pointer;
+  color: greenyellow;
+  
+}
+
+
+#banda3 {
+  
+  position: absolute;
+  font-size: 40px;
+  left: 1330px;
+  top: 600px;
+  
+}
+
+
+#banda3:hover {
+  
+  cursor: pointer;
+  color: greenyellow;
+  
+}

@@ -1,0 +1,32 @@
+.userContainer {
+  background-color: #1f202b;
+}
+
+.userContainer + .userContainer {
+  margin-top: 1rem;
+}
+
+.userContainer p {
+  padding: 1rem;
+  font-size: 1.25rem;
+  color: #e2e2e2;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.userInfoContainer {
+  display: none;
+  background-color: #262835;
+  list-style: none;
+  padding: 1rem;
+  color: #b6b6b6;
+}
+
+.userInfoContainer li {
+  word-break: break-all;
+}
+
+.userInfoContainer li + li {
+  margin-top: 1.5rem;
+}
