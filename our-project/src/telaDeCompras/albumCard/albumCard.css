@@ -1,0 +1,122 @@
+.album-card {
+  background-color: #1f202b;
+  border-radius: 0.35rem;
+  padding: 1rem;
+  display: grid;
+  justify-content: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+.img-card-container {
+  margin-bottom: 0.8rem;
+}
+
+.img-card-container img {
+  height: 400px;
+  object-fit: cover;
+}
+
+.span-card-container {
+  margin-bottom: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.span-card {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #1f202b;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+}
+
+.span-card + .span-card {
+  margin-left: 0.5rem;
+}
+
+.text-card {
+  color: #ffffff;
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+}
+
+.text-card,
+.text-card .span-date {
+  text-align: center;
+}
+
+.span-date {
+  color: #d74ed9;
+  display: block;
+}
+
+.bottom-container {
+  align-self: end;
+  margin-top: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.span-price {
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.card-btn {
+  background-color: #69266a;
+  color: #f5d3f6;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.card-btn:hover {
+  background-color: #914392;
+  color: #120913;
+}
+
+.img-heart-icon {
+  width: 40px;
+}
+
+@media (max-width: 425px) {
+  .img-card-container img {
+    height: auto;
+  }
+
+  .span-card {
+    font-size: 1rem;
+  }
+
+  .text-card {
+    font-size: 1.5rem;
+  }
+
+  .bottom-container {
+    gap: 0.5rem;
+  }
+
+  .span-price {
+    font-size: 1rem;
+  }
+
+  .card-btn {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+
+  .img-heart-icon {
+    width: 30px;
+  }
+}
