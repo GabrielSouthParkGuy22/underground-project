@@ -1,0 +1,350 @@
+
+/* CSS <Topo> */
+
+body {
+  
+  text-align: center;
+  background-color: darkmagenta;
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+  
+  
+}
+
+
+
+.container {
+  
+  display: flex;
+  background-color: black;
+  height: 100px;
+  column-gap: 800px;
+  align-items: center;
+  
+}
+
+
+.pesquisa {
+  
+  margin-right: -100px;
+  display: flex;
+  
+  
+  
+}
+
+
+.login ul{
+  
+  display: flex;
+  justify-content: space-around;
+  width: 180px;
+  list-style: none;
+  align-self: center;
+  font-size: 20px;
+  font-family: arial;
+  
+  
+}
+
+a {
+  
+  text-decoration: none;
+  color: white;
+  
+  
+}
+
+
+
+
+/*CSS Detalhe */
+
+.containerdetalhe {
+  
+  border: 1px solid black;
+  width: 1200px;
+  margin: auto;
+  padding: 0;
+  background-color: grey;
+  
+  
+  
+}
+
+
+.albumdetalhe {
+  
+  position: absolute;
+  margin-top: 100px;
+  margin-left: 100px;
+  color: white;
+  height: 420px;
+  background-color: black;
+  border-radius: 10px;
+  
+  
+}
+
+
+
+.formapagamento {
+  
+  max-width: 800px;
+  height: 395px;
+  margin-left: 600px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  border-radius: 10px;
+  text-align: left;
+  padding: 10px;
+  color: white;
+  border: 4px solid black;
+  line-height: 70px;
+  width: 500px;
+  background-color: black;
+  
+}
+
+.titulo {
+  
+  margin: 0;
+  text-align: center;
+  
+  
+}
+
+
+.comprar {
+  
+  text-align: center;
+  
+  
+}
+
+.botaocomprar {
+  
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* CSS Avaliação */
+
+.containeravaliacao {
+  
+  display: flex;
+  border: 1px solid black;
+  margin-left: 455px;
+  margin-right: 455px;
+  color: white;
+  background-color: black;
+  
+  
+  
+}
+
+.clienteavalia1, .clienteavalia2, .clienteavalia3, .clienteavalia4 {
+  
+  border: 1px solid black;
+  margin-right: 300px;
+  
+  
+}
+
+.clienteavalia1 {
+  
+  background-color: dimgrey;
+  border-radius: 10px;
+  
+}
+
+
+.clienteavalia2 {
+  
+  background-color: dimgrey;
+  border-radius: 10px;
+}
+
+.clienteavalia3 {
+  
+  background-color: dimgrey;
+  border-radius: 10px;
+}
+
+.clienteavalia4 {
+  
+  background-color: dimgrey;
+  border-radius: 10px;
+}
+
+.mediaavaliacao {
+  
+  margin-top: 150px;
+  margin-right: 250px;
+  
+  
+}
+
+
+
+
+/*CSS Meusalbuns */
+
+.containeralbuns {
+  
+  border: 1px solid black;
+  background-color: grey;
+  
+}
+
+.titulomeusfavoritos {
+  
+  color: white;  
+  
+}
+
+
+.albunsfavoritos {
+  
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  color: white;
+  
+  
+}
+
+.favorito1, .favorito2, .favorito3 {
+  
+  border: 1px solid black;
+  margin: 80px;
+  margin-top: 10px;
+  background-color: black;
+  border-radius: 10px;
+  
+  
+}
+
+.favorito1 {
+  
+  margin-bottom: 70px;
+  
+}
+
+
+.favorito2 {
+  
+  margin-bottom: 70px;
+  
+}
+
+.favorito3 {
+  
+  margin-bottom: 70px;
+  
+}
+
+.botaofavorito1, .botaofavorito2, .botaofavorito3 {
+  
+  
+  width: 100px;
+  height: 30px;
+  font-size: 16px;
+  border-radius: 5px;
+  
+}
+
+
+
+
+
+.setaesq {
+  
+  position: relative;
+  margin-top: 180px;
+}
+
+.setadir {
+  
+  position: relative;
+  margin-top: 180px;
+}
+
+
+
+
+
+
+/* CSS Newsletter */
+
+.containernews {
+  
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-around;
+  max-width: 100%;
+  max-height: 100%;
+  height: 120px;
+  border: 1px solid black;
+  color: white;
+}
+
+.notificacoes  { 
+  
+  padding: 30px;
+
+}
+
+.emailnews {
+  
+  padding: 40px;
+  
+}
+
+.inputemail {
+  
+  width: 300px;
+
+}
+
+
+.botaoemail {
+  
+  border-radius: 5px;
+  font-size: 16px;
+  
+  margin-left: 20px;
+  
+}
+
+.botaoemail:hover {
+  
+  cursor: pointer;
+  
+  
+}
+
+
+/* CSS Rodape */
+
+.contatos {
+  
+  position: relative;
+  height: 150px;
+  color: white;
+  border: 1px solid black;
+  background-color: black;
+  
+  
+}
+
+#contatos, #tel, #email {
+  
+  text-align: left;
+  line-height: 20px;
+  
+}
+
