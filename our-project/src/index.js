@@ -6,10 +6,12 @@ import reportWebVitals from './reportWebVitals';
 import UserRegister from './pages/userRegister';
 import Adm from '../src/ADM/adm_registerAlbuns/admAlbum.js';
 import UsuarioLogin from '../src/pages/usuarioLogin'
+import CadastroAlbum from '../src/ADM/adm_registerAlbuns/cadastroDeAlbuns/albunsCadastro.js'
+import PageCompras from './telaDeCompras/compras.js'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Adm/>
+    <PageCompras/>
   </React.StrictMode>
 );
 

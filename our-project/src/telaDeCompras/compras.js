@@ -8,6 +8,8 @@ import STREAM from "./imgs-albums/flowing_tream.png";
 import PHM from "./imgs-albums/pretty_hate_machine.png";
 import HC from "./imgs-albums/harmony_corruption.png";
 import AlbumCard from "./albumCard/albumCard";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
 const inri = INRI;
 const stream = STREAM;
@@ -62,6 +64,24 @@ const albumList = [
 ];
 
 export default function Compras() {
+
+  const [albuns, setAlbuns] = useState([])
+  const [erro, setErro] = useState("")
+
+  async function ChamarAxios () {
+    try {
+      const albunsData = await axios.get('http://localhost:5001/albuns', {})
+      setAlbuns(albunsData.data)
+      console.log(albuns)
+    } catch (error) {
+      setErro(error.message)
+    }
+    console.log(erro)
+  }
+
+  useEffect(() => {
+    ChamarAxios()
+  }, [])
   return (
     <>
       <Header />
@@ -110,18 +130,16 @@ export default function Compras() {
 
         <div id="albuns-selection-container">
           <ul id="albuns-selection-list">
-            {albumList.map((element) => (
+            {albuns.map((element) => (
               <AlbumCard
-                key={element["id"]}
-                id={element["id"]}
-                albumName={element["albumName"]}
-                albumBand={element["albumBand"]}
-                albumReleaseDate={element["albumReleaseDate"]}
-                type={element["type"]}
-                format={element["format"]}
-                img={element["img"]}
-                price={element["price"]}
-                amount={element["amount"]}
+                albumName={element["nome_album"]}
+                albumBand={element["nome_banda"]}
+                albumReleaseDate={element["lancamento_data"] ? element["lancamento_data"].slice(0,4) : "No Data Avaliable" }
+                type={element["tipo"]}
+                format={element["formato"]}
+                img={element["img"] ? element["img"] : "NO IMAGE AVALIABLE"}
+                price={element["preco"]}
+                amount={element["quantidade"]}
               />
             ))}
           </ul>
