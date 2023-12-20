@@ -58,7 +58,7 @@ server.post("/usuario/login", async (req,resp) => {
         if(!userLogado) {
             resp.status(401).send('nao autorizado')
         } else {
-            resp.status(200).send("autorizado")
+            resp.status(200).send(userLogado)
         }
     } catch (error) {
         resp.send(error.message)

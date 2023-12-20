@@ -25,7 +25,7 @@ export async function realizarLogin(email, senha) {
     const comando = 
     `
         select 
-        NOME, ID_USUARIO
+        NOME as nome, ID_USUARIO as id
         from tb_usuario
         where EMAIL = ? and SENHA = ?;
     `
