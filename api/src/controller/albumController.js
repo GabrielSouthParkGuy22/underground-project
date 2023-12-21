@@ -4,6 +4,7 @@ import { cadastroAlbum, deletarAlbumPorId, visualizarTodosAlbuns } from "../repo
 
 const server = Router()
 
+
 //endpoint para cadastrar um álbum
 server.post("/album", async (req,resp) => {
     try {
@@ -24,7 +25,7 @@ server.get("/albuns", async (req, res) => {
         const albuns = await visualizarTodosAlbuns()
 
         if(!albuns || albuns[0] == null || undefined) {
-            res.status(404).send()
+            throw new Error("Nenhum album encontrado!")
         }
 
         res.send(albuns)
