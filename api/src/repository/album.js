@@ -47,6 +47,3 @@ export async function deletarAlbumPorId (idBanda) {
     return call.affectedRows
 }
 
-
-
-

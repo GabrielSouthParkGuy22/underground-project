@@ -2,6 +2,7 @@ import Router from "express";
 
 import { inserirDados, realizarLogin, visualizarUsuarios } from "../repository/usuario.js";
 import { validacaoCadastro, validacaoVisualizacao } from '../services/validacoes.js'
+import { pedidoUsuario } from "../repository/pedido.js";
 
 const server = Router()
 
@@ -53,7 +54,7 @@ server.post("/usuario/login", async (req,resp) => {
     try {
         const {email, senha} = req.body 
         const userLogado = await realizarLogin(email, senha)
-        console.log(userLogado)
+        console.log(email, senha)
 
         if(!userLogado) {
             resp.status(401).send('nao autorizado')
@@ -64,6 +65,22 @@ server.post("/usuario/login", async (req,resp) => {
         resp.send(error.message)
     }
 })
+
+server.post("/cadastro/pedido", async (req,resp) => {
+    try {
+        const {idAlbum, idUsuario} = req.body 
+        const userLogado = await pedidoUsuario(idAlbum, idUsuario)
+        console.log(userLogado)
+        if(!idAlbum || !idUsuario) {
+            throw new Error("Campos de id inválidos ou não cadastrados")
+        }
+        resp.status(200).send(userLogado.data)
+    } catch (error) {
+        resp.status(401).send(error.message)
+    }
+})
+
+
 
 
 

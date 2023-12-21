@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import "./albumCard.css";
 import PropTypes from "prop-types";
 import heartIcon from "./heart_icon.svg";
+import axios from "axios";
+
 
 export default function AlbumCard(props) {
   function checkAmount() {
@@ -11,6 +13,9 @@ export default function AlbumCard(props) {
       return "Disponível";
     }
   }
+
+
+
 
   return (
     <>
@@ -24,7 +29,7 @@ export default function AlbumCard(props) {
             {props.format}
           </span>
           <span className="span-card" aria-label="formato do album">
-            {checkAmount()}
+
           </span>
         </div>
 
@@ -36,7 +41,7 @@ export default function AlbumCard(props) {
 
         <div className="bottom-container">
           <span className="span-price">{props.price}R$</span>
-          <button className="card-btn">COMPRAR</button>
+          <button  className="card-btn">COMPRAR</button>
           <img
             className="img-heart-icon"
             src={heartIcon}
