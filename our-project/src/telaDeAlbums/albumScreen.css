@@ -1,0 +1,134 @@
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+#albums-purchased-container {
+  padding: 1rem;
+}
+
+#purchase-album {
+  background-color: #262835;
+  border-radius: 0.35rem;
+  /* height: 400px;
+  overflow-y: scroll; */
+}
+
+#client-name-container {
+  padding: 1rem;
+  border-radius: 0.35rem 0.35rem 0rem 0rem;
+  background-color: #170618;
+}
+
+.client-name {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+#client-purchases-container {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 1rem;
+}
+
+#client-purchases-list {
+  height: 400px;
+  overflow-y: scroll;
+}
+
+#total-price-container {
+  align-self: start;
+  background-color: #15161d;
+  border-radius: 0.35rem;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  height: 300px;
+}
+
+.total-price {
+  background-color: #3e1641;
+  padding: 1rem;
+  border-radius: 0.35rem 0.35rem 0rem 0rem;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #ffffff;
+  align-self: start;
+}
+
+#total-price-container ul {
+  padding: 1rem;
+  align-self: start;
+}
+
+#total-price-container ul li {
+  color: #d6d6d6;
+  font-size: 1.15rem;
+}
+
+#total-price-container ul li + li {
+  margin-top: 0.5rem;
+}
+
+#confirm-btn-container {
+  padding: 1rem;
+  align-self: end;
+  justify-self: center;
+}
+
+#confirm-btn {
+  background-color: #69266a;
+  color: #f5d3f6;
+  border: none;
+  padding: 0.65rem;
+  border-radius: 0.5rem;
+  font-size: 1.35rem;
+  cursor: pointer;
+}
+
+#confirm-btn:hover {
+  background-color: #914392;
+  color: #120913;
+}
+
+#client-purchases-list::-webkit-scrollbar {
+  width: 20px;
+}
+
+#client-purchases-list::-webkit-scrollbar-track {
+  background: #464858;
+  border-radius: 1rem;
+}
+
+#client-purchases-list::-webkit-scrollbar-thumb {
+  background: #15161d;
+  border-radius: 1rem;
+}
+
+#client-purchases-list::-webkit-scrollbar-thumb:hover {
+  background: #3e1641;
+}
+
+@media (max-width: 1000px) {
+  #client-purchases-container {
+    grid-template-columns: 1fr;
+  }
+
+  #client-purchases-list {
+    height: 360px;
+  }
+
+  #total-price-container {
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  #client-purchases-list::-webkit-scrollbar {
+    width: 10px;
+  }
+}

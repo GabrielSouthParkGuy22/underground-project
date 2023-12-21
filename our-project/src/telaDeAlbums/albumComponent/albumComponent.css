@@ -1,0 +1,56 @@
+.album-data {
+  background-color: #0d0e13;
+  border-radius: 0.35rem;
+}
+
+.album-data + .album-data {
+  margin-top: 2rem;
+}
+
+.purchase-albums {
+  max-width: 100px;
+}
+
+.album-info {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.album-info li:first-child {
+  border-radius: 0.35rem 0rem 0rem 0.35rem;
+}
+
+.album-info li + li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.album-info li img {
+  border-radius: 0.35rem 0rem 0rem 0.35rem;
+}
+
+.album-info li:nth-child(odd) {
+  background-color: #1c1d25;
+}
+
+.album-info li span {
+  font-size: 1.25rem;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .album-info {
+    grid-template-columns: 1fr;
+    gap: 0rem;
+  }
+
+  .album-info li + li {
+    padding: 1rem;
+  }
+
+  .album-info li img {
+    display: none;
+  }
+}
