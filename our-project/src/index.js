@@ -9,10 +9,11 @@ import UsuarioLogin from "../src/pages/usuarioLogin";
 import CadastroAlbum from "../src/ADM/adm_registerAlbuns/cadastroDeAlbuns/albunsCadastro.js";
 import PageCompras from "./telaDeCompras/compras.js";
 import AlbumTela from "./telaDeAlbums/albumScreen.js";
+import TelaPrincipal from "./telaPrincipal/telaPrincipal.js";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <TelaPrincipal />
   </React.StrictMode>
 );
 
