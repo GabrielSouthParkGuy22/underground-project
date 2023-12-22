@@ -4,16 +4,17 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import UserRegister from "./pages/userRegister";
-import Adm from "../src/ADM/adm_registerAlbuns/admAlbum.js";
 import UsuarioLogin from "../src/pages/usuarioLogin";
 import CadastroAlbum from "../src/ADM/adm_registerAlbuns/cadastroDeAlbuns/albunsCadastro.js";
 import PageCompras from "./telaDeCompras/compras.js";
 import AlbumTela from "./telaDeAlbums/albumScreen.js";
 import TelaPrincipal from "./telaPrincipal/telaPrincipal.js";
+
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <TelaPrincipal />
+    <App/>
   </React.StrictMode>
 );
 
