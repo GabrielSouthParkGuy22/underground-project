@@ -1,0 +1,52 @@
+#global-container {
+  max-width: 1600px;
+  margin: 0rem auto;
+}
+
+#main-adm-title {
+  background-color: #262835;
+  padding: 1rem;
+}
+
+#main-adm-container {
+  display: grid;
+  justify-content: center;
+  margin: 2rem 0rem;
+  padding: 1rem;
+}
+
+#main-adm-title h1 {
+  color: #ffffff;
+}
+
+.adm-block {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #262835;
+  border-radius: 0.35rem;
+}
+
+.adm-block + .adm-block {
+  margin-top: 1rem;
+}
+
+.adm-block p {
+  font-size: 1.35rem;
+  color: #ffffff;
+}
+
+.adm-block p span {
+  color: #69266a;
+}
+
+@media (max-width: 400px) {
+  .adm-block {
+    flex-direction: column;
+  }
+
+  .adm-block p {
+    text-align: center;
+  }
+}
