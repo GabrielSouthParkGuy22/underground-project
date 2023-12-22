@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./adm_header.css";
 import logo from "../../imgs/Vector.svg";
 import search_icon from "../../imgs/search_icon.svg";
@@ -26,7 +27,9 @@ export default function AdmHeader() {
   return (
     <header id="adm-header-container">
       <div className="logo-container">
-        <img src={logo} alt="Logo" id="logo" />
+        <Link to="/">
+          <img src={logo} alt="Logo" id="logo" />
+        </Link>
       </div>
       <div className="search-container">
         <input type="search" id="search-input" name="search-input" />

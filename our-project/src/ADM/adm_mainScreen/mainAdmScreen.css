@@ -28,7 +28,11 @@
   border-radius: 0.35rem;
 }
 
-.adm-block + .adm-block {
+.link-block {
+  text-decoration: none;
+}
+
+.link-block + .link-block {
   margin-top: 1rem;
 }
 
