@@ -1,7 +1,8 @@
 import {con} from '../connection.js'
 
 export async function cadastroAlbum(info) {
-    const comando = `
+    const comando = 
+    `
     INSERT INTO tb_album (NOME, DESCRICAO, TIPO, FORMATO, LANCAMENTO, PRECO, QUANTIDADE, IMAGEM_URL, FK_BANDA)
     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);
     `
